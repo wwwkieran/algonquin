@@ -102,6 +102,7 @@ function createChart(algonquin_park_boundary,
         .attr("d", path)
 
 
+
     const lakes = g.append("g")
         .attr("fill", "#ccecff")
         // .attr("stroke", "#000000")
@@ -264,7 +265,7 @@ function createChart(algonquin_park_boundary,
             lakes.attr("opacity", 0);
             portages.attr("opacity", 0);
 
-            outline.attr("opacity", percentScrolled(0));
+            outline.attr("opacity", 0.3 + 0.7*percentScrolled(0));
         } else if (scrollPosition < 2 * windowHeight) {
             outline.attr("opacity", 1);
             portages.attr("opacity", 0);
